@@ -1,15 +1,15 @@
 "use strict";
 
 // Select all panels
-const selected = document.querySelectorAll(".panel");
+const cards = document.querySelectorAll(".panel");
 
-selected.forEach((select) => {
+cards.forEach((card) => {
   // Select the h3 of the current panel
-  const heading = select.querySelector("h3");
-  // Add an event listener to the current panel
-  select.addEventListener("click", (e) => {
+  const heading = card.querySelector("h3");
+  // Add an event listener to the current
+  card.addEventListener("click", (e) => {
     // Close open card before displaying the clicked one
-    selected.forEach((panel) => {
+    cards.forEach((panel) => {
       panel.classList.remove("active");
       const panelHeading = panel.querySelector("h3");
       panelHeading.classList.add("hide");
